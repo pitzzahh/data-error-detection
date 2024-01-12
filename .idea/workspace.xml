@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f1c995d-b83e-40f7-b08e-a9ab75b9563a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tech/araopj/helpers/Helper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tech/araopj/helpers/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tech/araopj/helpers/HelperTest.java" afterDir="false" />
+    <list default="true" id="4f1c995d-b83e-40f7-b08e-a9ab75b9563a" name="Changes" comment=":sparkles: Add helper class">
+      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tech/araopj/errorDetection/ArithmeticChecksum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/araopj/errorDetection/ArithmeticChecksum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tech/araopj/errorDetection/Helper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tech/araopj/errorDetection/ParityCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/araopj/errorDetection/ParityCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tech/araopj/errorDetection/TwoDimensionalParity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/araopj/errorDetection/TwoDimensionalParity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tech/araopj/errorDetection/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/araopj/errorDetection/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,11 +95,77 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1705065625006</updated>
-      <workItem from="1705065630269" duration="7012000" />
+      <workItem from="1705065630269" duration="7465000" />
     </task>
+    <task id="LOCAL-00001" summary=":memo: Add comments">
+      <option name="closed" value="true" />
+      <created>1705072835704</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1705072835704</updated>
+    </task>
+    <task id="LOCAL-00002" summary=":white_check_mark: Add test">
+      <option name="closed" value="true" />
+      <created>1705072860297</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705072860297</updated>
+    </task>
+    <task id="LOCAL-00003" summary=":memo: Add package infos">
+      <option name="closed" value="true" />
+      <created>1705072883463</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705072883463</updated>
+    </task>
+    <task id="LOCAL-00004" summary=":wrench: Update config files">
+      <option name="closed" value="true" />
+      <created>1705072917879</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1705072917879</updated>
+    </task>
+    <task id="LOCAL-00005" summary=":truck: Moved to new package">
+      <option name="closed" value="true" />
+      <created>1705072942289</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705072942289</updated>
+    </task>
+    <task id="LOCAL-00006" summary=":white_check_mark: Add test">
+      <option name="closed" value="true" />
+      <created>1705072956088</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1705072956088</updated>
+    </task>
+    <task id="LOCAL-00007" summary=":sparkles: Add helper class">
+      <option name="closed" value="true" />
+      <created>1705072988146</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1705072988146</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value=":memo: Add comments" />
+    <MESSAGE value=":memo: Add package infos" />
+    <MESSAGE value=":wrench: Update config files" />
+    <MESSAGE value=":truck: Moved to new package" />
+    <MESSAGE value=":white_check_mark: Add test" />
+    <MESSAGE value=":sparkles: Add helper class" />
+    <option name="LAST_COMMIT_MESSAGE" value=":sparkles: Add helper class" />
   </component>
 </project>
