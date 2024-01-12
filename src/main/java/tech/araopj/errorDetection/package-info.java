@@ -14,12 +14,12 @@
  * </p>
  *
  * <ul>
- *     <li>Parity Check (Vertical Redundancy Check) - A simple method of error detection by adding redundant bits, called
- *         parity bits, to each character.</li>
- *     <li>Two-Dimensional Parity (Longitudinal Redundancy Check) - Blocks of data organized as a two-dimensional array to
- *         increase the likelihood of detecting burst errors.</li>
- *     <li>Arithmetic Checksum - A sequence of numbers and letters used to check data for errors. This sum is added to the
- *         end of the message before transmission to the receiving end.</li>
+ *     <li>{@link tech.araopj.errorDetection.ParityCheck Parity Check} - A simple method of error detection by adding
+ *         redundant bits, called parity bits, to each character.</li>
+ *     <li>{@link tech.araopj.errorDetection.TwoDimensionalParity Two-Dimensional Parity} (Longitudinal Redundancy Check) -
+ *         Blocks of data organized as a two-dimensional array to increase the likelihood of detecting burst errors.</li>
+ *     <li>{@link tech.araopj.errorDetection.ArithmeticChecksum Arithmetic Checksum} - A sequence of numbers and letters
+ *         used to check data for errors. This sum is added to the end of the message before transmission to the receiving end.</li>
  * </ul>
  *
  * <p>
