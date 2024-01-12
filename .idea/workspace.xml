@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f1c995d-b83e-40f7-b08e-a9ab75b9563a" name="Changes" comment=":sparkles: Add helper class">
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+    <list default="true" id="4f1c995d-b83e-40f7-b08e-a9ab75b9563a" name="Changes" comment=":memo: Update README.md">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/maven-publish.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +55,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -95,7 +97,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1705065625006</updated>
-      <workItem from="1705065630269" duration="7465000" />
+      <workItem from="1705065630269" duration="8257000" />
     </task>
     <task id="LOCAL-00001" summary=":memo: Add comments">
       <option name="closed" value="true" />
@@ -153,7 +155,31 @@
       <option name="project" value="LOCAL" />
       <updated>1705072988146</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary=":page_facing_up: Add LICENSE">
+      <option name="closed" value="true" />
+      <created>1705073253614</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1705073253614</updated>
+    </task>
+    <task id="LOCAL-00009" summary=":wrench: Update ide workspace.xml">
+      <option name="closed" value="true" />
+      <created>1705073273184</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1705073273184</updated>
+    </task>
+    <task id="LOCAL-00010" summary=":memo: Update README.md">
+      <option name="closed" value="true" />
+      <created>1705073303514</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1705073303514</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +192,9 @@
     <MESSAGE value=":truck: Moved to new package" />
     <MESSAGE value=":white_check_mark: Add test" />
     <MESSAGE value=":sparkles: Add helper class" />
-    <option name="LAST_COMMIT_MESSAGE" value=":sparkles: Add helper class" />
+    <MESSAGE value=":page_facing_up: Add LICENSE" />
+    <MESSAGE value=":wrench: Update ide workspace.xml" />
+    <MESSAGE value=":memo: Update README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value=":memo: Update README.md" />
   </component>
 </project>
