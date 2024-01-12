@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f1c995d-b83e-40f7-b08e-a9ab75b9563a" name="Changes" comment=":memo: Update README.md">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/maven-publish.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/maven-publish.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven-publish.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +94,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1705065625006</updated>
-      <workItem from="1705065630269" duration="8257000" />
+      <workItem from="1705065630269" duration="8553000" />
     </task>
     <task id="LOCAL-00001" summary=":memo: Add comments">
       <option name="closed" value="true" />
@@ -179,11 +176,54 @@
       <option name="project" value="LOCAL" />
       <updated>1705073303514</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary=":construction_worker: Add workflow for publishing maven packages">
+      <option name="closed" value="true" />
+      <created>1705074048792</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1705074048792</updated>
+    </task>
+    <task id="LOCAL-00012" summary=":building_construction: Add build plugins">
+      <option name="closed" value="true" />
+      <created>1705074079853</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1705074079853</updated>
+    </task>
+    <task id="LOCAL-00013" summary=":wrench: Update ide workspace.xml">
+      <option name="closed" value="true" />
+      <created>1705074090078</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1705074090078</updated>
+    </task>
+    <task id="LOCAL-00014" summary=":memo: Update README.md">
+      <option name="closed" value="true" />
+      <created>1705074110692</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1705074110692</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value=":memo: Add comments" />
@@ -193,6 +233,8 @@
     <MESSAGE value=":white_check_mark: Add test" />
     <MESSAGE value=":sparkles: Add helper class" />
     <MESSAGE value=":page_facing_up: Add LICENSE" />
+    <MESSAGE value=":construction_worker: Add workflow for publishing maven packages" />
+    <MESSAGE value=":building_construction: Add build plugins" />
     <MESSAGE value=":wrench: Update ide workspace.xml" />
     <MESSAGE value=":memo: Update README.md" />
     <option name="LAST_COMMIT_MESSAGE" value=":memo: Update README.md" />
