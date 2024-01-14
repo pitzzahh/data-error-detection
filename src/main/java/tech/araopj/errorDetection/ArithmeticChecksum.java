@@ -13,6 +13,15 @@ package tech.araopj.errorDetection;
  * @version 1.0
  * @since 1.0
  */
-public class ArithmeticChecksum {
+public class ArithmeticChecksum implements Handler<ArithmeticChecksum> {
 
+    /**
+     * Handles the input for error detection.
+     *
+     * @param input The user input data to be checked for errors.
+     */
+    @Override
+    public void handle(String input) {
+
+    }
 }
