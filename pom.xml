@@ -20,7 +20,7 @@
         <dependency>
             <groupId>me.araopj</groupId>
             <artifactId>cscreen</artifactId>
-            <version>3.3.2</version>
+            <version>3.3.3</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
