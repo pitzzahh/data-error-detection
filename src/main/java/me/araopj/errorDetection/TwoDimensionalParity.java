@@ -9,8 +9,8 @@ package me.araopj.errorDetection;
  * </ul>
  *
  * @author Peter John Arao
- * @version 1.0
- * @since 1.0
+ * @version 0.0.1
+ * @since 0.0.1
  */
 public class TwoDimensionalParity implements Handler {
 
@@ -22,6 +22,6 @@ public class TwoDimensionalParity implements Handler {
      */
     @Override
     public boolean handle(String input) {
-        return false;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }
