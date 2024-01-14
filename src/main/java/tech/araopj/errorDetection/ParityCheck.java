@@ -1,5 +1,12 @@
 package tech.araopj.errorDetection;
 
+import me.araopj.cscreen.classes.Position;
+import me.araopj.cscreen.components.CTable;
+import tech.araopj.helpers.Helper;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  * Parity Check (Vertical Redundancy Check) - A simple method of error detection is by adding redundant bits
  * called parity bits to each character.
@@ -16,6 +23,52 @@ package tech.araopj.errorDetection;
  * @version 1.0
  * @since 1.0
  */
-public class ParityCheck {
+public class ParityCheck implements Handler<ParityCheck> {
+    private final String[] header = {
+            "Letter",
+            "ASCII Binary Equivalent",
+            "Number of bits",
+            "Parity",
+            "Parity Bit Set",
+            "ASCII Binary with ParityBit"
+    };
 
+    /**
+     * Handles the input for error detection.
+     *
+     * @param input The user input data to be checked for errors.
+     */
+    @Override
+    public void handle(String input) {
+        List<List<String>> rows = Arrays.stream(input.split(""))
+                .map(e -> {
+                    char character = e.charAt(0);
+                    int asciiBinary = Helper.getAsciiBinary(character);
+                    long bitCount = Helper.bitCount(asciiBinary);
+                    String parity = Helper.isEven(bitCount) ? "Even" : "Odd";
+                    int parityBitSet = Helper.parityBitSet(parity);
+
+                    return Arrays.asList(
+                            String.valueOf(character),
+                            String.valueOf(asciiBinary),
+                            String.valueOf(bitCount),
+                            parity,
+                            String.valueOf(parityBitSet),
+                            String.valueOf(Helper.asciiBinaryWithParityBit(asciiBinary, parityBitSet))
+                    );
+                })
+                .collect(Collectors.toList());
+
+        CTable table = new CTable(header);
+        table.useBoxSet();
+        table.hasSeparator(true);
+
+        rows.forEach(e -> table.addRow(e.toArray(String[]::new)));
+
+        for (int i = 0; i < header.length; i++) {
+            table.setColumnAlignment(i, Position.CENTER);
+        }
+
+        table.display();
+    }
 }
