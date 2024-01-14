@@ -1,6 +1,7 @@
 package tech.araopj.helpers;
 
 import java.util.Arrays;
+import java.util.Locale;
 import java.util.Objects;
 
 /**
@@ -14,7 +15,7 @@ public class Helper {
      * @param num The integer to be checked.
      * @return True if the integer is even, false otherwise.
      */
-    public static boolean isEven(int num) {
+    public static boolean isEven(long num) {
         return num % 2 == 0;
     }
 
@@ -24,7 +25,7 @@ public class Helper {
      * @param num The integer to be checked.
      * @return True if the integer is odd, false otherwise.
      */
-    public static boolean isOdd(int num) {
+    public static boolean isOdd(long num) {
         return num % 2 != 0;
     }
 
@@ -60,4 +61,26 @@ public class Helper {
                 .filter(e -> Objects.equals(e, "1"))
                 .count();
     }
+
+    /**
+     * Calculates the parity bit set of a given parity.
+     *
+     * @param parity The parity.
+     * @return The parity bit set of the parity
+     */
+    public static int parityBitSet(String parity) {
+        return Objects.equals(parity.toLowerCase(Locale.ROOT), "odd") ? 1 : 0;
+    }
+
+    /**
+     * Calculates the ASCII binary representation with a specified parity bit.
+     *
+     * @param asciiBinary The ASCII binary representation of a character.
+     * @param parityBit   The parity bit to be added to the ASCII binary representation.
+     * @return A long value representing the combined ASCII binary with the specified parity bit.
+     */
+    public static long asciiBinaryWithParityBit(int asciiBinary, int parityBit) {
+        return Long.parseLong(String.format("%d%d", asciiBinary, parityBit));
+    }
+
 }
