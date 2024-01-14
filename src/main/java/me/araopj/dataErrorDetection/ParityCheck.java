@@ -1,4 +1,4 @@
-package me.araopj.errorDetection;
+package me.araopj.dataErrorDetection;
 
 import me.araopj.cscreen.classes.Position;
 import me.araopj.cscreen.components.CTable;

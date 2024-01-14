@@ -1,4 +1,4 @@
-package me.araopj.errorDetection;
+package me.araopj.dataErrorDetection;
 
 /**
  * Two-Dimensional Parity (Longitudinal Redundancy Check) - In the two-dimensional parity check, blocks of

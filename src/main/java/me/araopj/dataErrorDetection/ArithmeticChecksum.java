@@ -1,4 +1,4 @@
-package me.araopj.errorDetection;
+package me.araopj.dataErrorDetection;
 
 /**
  * Arithmetic Checksum - A checksum is a sequence of numbers and letters used to check data for errors. This

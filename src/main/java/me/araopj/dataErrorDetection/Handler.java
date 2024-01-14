@@ -1,4 +1,4 @@
-package me.araopj.errorDetection;
+package me.araopj.dataErrorDetection;
 
 @FunctionalInterface
 public interface Handler {
