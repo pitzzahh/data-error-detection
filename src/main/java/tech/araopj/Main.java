@@ -1,11 +1,12 @@
 package tech.araopj;
 
-import java.util.Random;
+import tech.araopj.errorDetection.Handler;
+import tech.araopj.errorDetection.ParityCheck;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        new Random().ints(Integer.MIN_VALUE, Integer.MAX_VALUE)
-                .limit(Byte.MAX_VALUE)
-                .forEach(randomNumber -> System.out.println("randomNumber = " + randomNumber));
+        Handler<ParityCheck> parityCheckHandler = new ParityCheck();
+        parityCheckHandler.handle(new Scanner(System.in).nextLine());
     }
 }
