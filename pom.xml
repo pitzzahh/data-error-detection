@@ -4,13 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>tech.araopj</groupId>
+    <groupId>me.araopj</groupId>
     <artifactId>data-error-detection</artifactId>
-    <version>${revision}</version>
+    <version>0.0.1</version>
     <packaging>jar</packaging>
 
     <properties>
-        <revision>1.0.10-SNAPSHOT</revision>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
