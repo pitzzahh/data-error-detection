@@ -49,8 +49,8 @@ public class Helper {
      * @param value The character to be converted.
      * @return The ASCII binary representation of the character.
      */
-    public static int getAsciiBinary(char value) {
-        return Integer.parseInt(Integer.toBinaryString(value));
+    public static long getAsciiBinary(char value) {
+        return Long.parseLong(Long.toBinaryString(value));
     }
 
     /**
@@ -59,7 +59,7 @@ public class Helper {
      * @param binary The integer for which to count set bits.
      * @return The count of set bits in the binary representation.
      */
-    public static long bitCount(int binary) {
+    public static long bitCount(long binary) {
         return Arrays.stream(String.valueOf(binary)
                         .split(""))
                 .filter(e -> Objects.equals(e, "1"))
@@ -83,7 +83,7 @@ public class Helper {
      * @param parityBit   The parity bit to be added to the ASCII binary representation.
      * @return A long value representing the combined ASCII binary with the specified parity bit.
      */
-    public static long asciiBinaryWithParityBit(int asciiBinary, int parityBit) {
+    public static long asciiBinaryWithParityBit(long asciiBinary, int parityBit) {
         return Long.parseLong(String.format("%d%d", asciiBinary, parityBit));
     }
 
