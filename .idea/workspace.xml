@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f1c995d-b83e-40f7-b08e-a9ab75b9563a" name="Changes" comment=":memo: Update README.md">
+    <list default="true" id="4f1c995d-b83e-40f7-b08e-a9ab75b9563a" name="Changes" comment=":wrench: Update gitignore">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/maven-publish.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven-publish.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tech/araopj/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/araopj/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +33,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2ar90lSLNmbVMsJ3YwyZW2PstmV" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -52,6 +57,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
@@ -64,7 +72,20 @@
       <recent name="tech.araopj.helpers" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tech.araopj.Main" />
+      <module name="data-error-detection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tech.araopj.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HelperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="data-error-detection" />
       <extension name="coverage">
@@ -82,6 +103,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.HelperTest" />
       </list>
     </recent_temporary>
@@ -94,7 +116,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1705065625006</updated>
-      <workItem from="1705065630269" duration="8835000" />
+      <workItem from="1705065630269" duration="9574000" />
+      <workItem from="1705106323369" duration="4445000" />
+      <workItem from="1705193175525" duration="3929000" />
     </task>
     <task id="LOCAL-00001" summary=":memo: Add comments">
       <option name="closed" value="true" />
@@ -232,7 +256,31 @@
       <option name="project" value="LOCAL" />
       <updated>1705074376619</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary=":wrench: Add repositories tab">
+      <option name="closed" value="true" />
+      <created>1705074618787</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1705074618787</updated>
+    </task>
+    <task id="LOCAL-00019" summary=":wrench: Update ide workspace.xml">
+      <option name="closed" value="true" />
+      <created>1705074630452</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1705074630452</updated>
+    </task>
+    <task id="LOCAL-00020" summary=":wrench: Update gitignore">
+      <option name="closed" value="true" />
+      <created>1705199764795</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1705199764795</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,8 +308,10 @@
     <MESSAGE value=":construction_worker: Add workflow for publishing maven packages" />
     <MESSAGE value=":building_construction: Add build plugins" />
     <MESSAGE value=":bug: Fix workflow java-version" />
-    <MESSAGE value=":wrench: Update ide workspace.xml" />
     <MESSAGE value=":memo: Update README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value=":memo: Update README.md" />
+    <MESSAGE value=":wrench: Add repositories tab" />
+    <MESSAGE value=":wrench: Update ide workspace.xml" />
+    <MESSAGE value=":wrench: Update gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value=":wrench: Update gitignore" />
   </component>
 </project>
