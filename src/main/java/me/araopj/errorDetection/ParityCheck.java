@@ -3,8 +3,11 @@ package me.araopj.errorDetection;
 import me.araopj.cscreen.classes.Position;
 import me.araopj.cscreen.components.CTable;
 import me.araopj.helpers.Helper;
+
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 /**
@@ -20,8 +23,8 @@ import java.util.stream.Collectors;
  * </ul>
  *
  * @author Peter John Arao
- * @version 1.0
- * @since 1.0
+ * @version 0.0.1
+ * @since 0.0.1
  */
 public class ParityCheck implements Handler {
     private final String[] header = {
@@ -30,7 +33,7 @@ public class ParityCheck implements Handler {
             "Number of bits",
             "Parity",
             "Parity Bit Set",
-            "ASCII Binary with ParityBit"
+            "ASCII Binary with Parity Bit"
     };
 
     /**
@@ -41,22 +44,22 @@ public class ParityCheck implements Handler {
      */
     @Override
     public boolean handle(String input) {
-        List<List<String>> rows = Arrays.stream(input.split(""))
+        List<List<Model>> rows = Arrays.stream(input.split(""))
                 .map(e -> {
                     char character = e.charAt(0);
-                    int asciiBinary = Helper.getAsciiBinary(character);
+                    long asciiBinary = Helper.getAsciiBinary(character);
                     long bitCount = Helper.bitCount(asciiBinary);
                     String parity = Helper.isEven(bitCount) ? "Even" : "Odd";
                     int parityBitSet = Helper.parityBitSet(parity);
-
-                    return Arrays.asList(
-                            String.valueOf(character),
-                            String.valueOf(asciiBinary),
-                            String.valueOf(bitCount),
+                    Model model = new Model(
+                            character,
+                            asciiBinary,
+                            bitCount,
                             parity,
-                            String.valueOf(parityBitSet),
-                            String.valueOf(Helper.asciiBinaryWithParityBit(asciiBinary, parityBitSet))
+                            parityBitSet,
+                            Helper.asciiBinaryWithParityBit(asciiBinary, parityBitSet)
                     );
+                    return List.of(model);
                 })
                 .collect(Collectors.toList());
 
@@ -64,14 +67,58 @@ public class ParityCheck implements Handler {
         table.useBoxSet();
         table.hasSeparator(true);
 
-        rows.forEach(e -> table.addRow(e.toArray(String[]::new)));
-
         for (int i = 0; i < header.length; i++) {
             table.setColumnAlignment(i, Position.CENTER);
         }
 
+        rows.stream()
+                .flatMap(Collection::stream)
+                .forEach(e -> table.addRow(e.getData()));
+
         table.display();
 
         return false;
+    }
+
+    protected static class Model {
+        public char letter;
+        public long asciiBinary;
+        public long numberOfBits;
+        public String parity;
+        public int parityBitSet;
+        public long abBitSet;
+
+        public Model(char letter, long asciiBinary, long numberOfBits, String parity, int parityBitSet, long abBitSet) {
+            this.letter = letter;
+            this.asciiBinary = asciiBinary;
+            this.numberOfBits = numberOfBits;
+            this.parity = parity;
+            this.parityBitSet = parityBitSet;
+            this.abBitSet = abBitSet;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Model model = (Model) o;
+            return asciiBinary == model.asciiBinary && numberOfBits == model.numberOfBits && parityBitSet == model.parityBitSet && abBitSet == model.abBitSet && Objects.equals(letter, model.letter) && Objects.equals(parity, model.parity);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(letter, asciiBinary, numberOfBits, parity, parityBitSet, abBitSet);
+        }
+
+        public String[] getData() {
+            return new String[]{
+                    String.valueOf(letter),
+                    String.valueOf(asciiBinary),
+                    String.valueOf(numberOfBits),
+                    parity,
+                    String.valueOf(parityBitSet),
+                    String.valueOf(abBitSet)
+            };
+        }
     }
 }
