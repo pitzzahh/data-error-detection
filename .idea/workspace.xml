@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f1c995d-b83e-40f7-b08e-a9ab75b9563a" name="Changes" comment=":rocket: Update workflow Java CI" />
+    <list default="true" id="4f1c995d-b83e-40f7-b08e-a9ab75b9563a" name="Changes" comment=":arrow_up: Bump cscreen to 3.3.3">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/maven-publish.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven-publish.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,7 +114,7 @@
       <updated>1705065625006</updated>
       <workItem from="1705065630269" duration="9574000" />
       <workItem from="1705106323369" duration="4445000" />
-      <workItem from="1705193175525" duration="4101000" />
+      <workItem from="1705193175525" duration="4495000" />
     </task>
     <task id="LOCAL-00001" summary=":memo: Add comments">
       <option name="closed" value="true" />
@@ -313,7 +316,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705199958243</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary=":wrench: Update ide config files">
+      <option name="closed" value="true" />
+      <created>1705200041466</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1705200041466</updated>
+    </task>
+    <task id="LOCAL-00027" summary=":arrow_up: Bump cscreen to 3.3.3">
+      <option name="closed" value="true" />
+      <created>1705200137272</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1705200137272</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,10 +364,11 @@
     <MESSAGE value=":wrench: Update ide workspace.xml" />
     <MESSAGE value=":wrench: Update gitignore" />
     <MESSAGE value=":memo: Update README.md" />
-    <MESSAGE value=":wrench: Update ide config files" />
     <MESSAGE value=":recycle: Update Main" />
     <MESSAGE value=":wrench: Update pom java version" />
     <MESSAGE value=":rocket: Update workflow Java CI" />
-    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Update workflow Java CI" />
+    <MESSAGE value=":wrench: Update ide config files" />
+    <MESSAGE value=":arrow_up: Bump cscreen to 3.3.3" />
+    <option name="LAST_COMMIT_MESSAGE" value=":arrow_up: Bump cscreen to 3.3.3" />
   </component>
 </project>
