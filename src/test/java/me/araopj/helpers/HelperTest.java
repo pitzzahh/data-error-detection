@@ -17,7 +17,7 @@ class HelperTest {
         int[] expectedData = getAsciiBinaries();
 
         for (int i = 0, testDataLength = testData.length; i < testDataLength; i++) {
-            int result = Helper.getAsciiBinary(testData[i]);
+            long result = Helper.getAsciiBinary(testData[i]);
             System.out.printf("[result = %d] : [expected = %d] : [test data =  %s]\n", result, expectedData[i], testData[i]);
             assertEquals(expectedData[i], result);
         }
