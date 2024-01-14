@@ -1,4 +1,4 @@
-package tech.araopj.errorDetection;
+package me.araopj.errorDetection;
 
 /**
  * Arithmetic Checksum - A checksum is a sequence of numbers and letters used to check data for errors. This
@@ -21,7 +21,7 @@ public class ArithmeticChecksum implements Handler<ArithmeticChecksum> {
      * @param input The user input data to be checked for errors.
      */
     @Override
-    public void handle(String input) {
-
+    public boolean handle(String input) {
+        return false;
     }
 }

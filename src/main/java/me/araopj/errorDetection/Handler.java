@@ -1,4 +1,4 @@
-package tech.araopj.errorDetection;
+package me.araopj.errorDetection;
 
 @FunctionalInterface
 public interface Handler<T> {
@@ -7,5 +7,5 @@ public interface Handler<T> {
      *
      * @param input The user input data to be checked for errors.
      */
-    void handle(String input);
+    boolean handle(String input);
 }

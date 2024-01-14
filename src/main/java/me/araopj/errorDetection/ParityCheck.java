@@ -1,8 +1,8 @@
-package tech.araopj.errorDetection;
+package me.araopj.errorDetection;
 
 import me.araopj.cscreen.classes.Position;
 import me.araopj.cscreen.components.CTable;
-import tech.araopj.helpers.Helper;
+import me.araopj.helpers.Helper;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -39,7 +39,7 @@ public class ParityCheck implements Handler<ParityCheck> {
      * @param input The user input data to be checked for errors.
      */
     @Override
-    public void handle(String input) {
+    public boolean handle(String input) {
         List<List<String>> rows = Arrays.stream(input.split(""))
                 .map(e -> {
                     char character = e.charAt(0);
@@ -70,5 +70,7 @@ public class ParityCheck implements Handler<ParityCheck> {
         }
 
         table.display();
+
+        return false;
     }
 }

@@ -1,4 +1,4 @@
-package tech.araopj.errorDetection;
+package me.araopj.errorDetection;
 
 /**
  * Two-Dimensional Parity (Longitudinal Redundancy Check) - In the two-dimensional parity check, blocks of
@@ -20,7 +20,7 @@ public class TwoDimensionalParity implements Handler<TwoDimensionalParity> {
      * @param input The user input data to be checked for errors.
      */
     @Override
-    public void handle(String input) {
-
+    public boolean handle(String input) {
+        return false;
     }
 }

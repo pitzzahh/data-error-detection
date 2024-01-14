@@ -6,4 +6,4 @@
  * @version 1.0
  * @since 1.0
  */
-package tech.araopj.helpers;
+package me.araopj.helpers;

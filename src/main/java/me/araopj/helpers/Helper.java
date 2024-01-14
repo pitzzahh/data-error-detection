@@ -1,4 +1,4 @@
-package tech.araopj.helpers;
+package me.araopj.helpers;
 
 import java.util.Arrays;
 import java.util.Locale;

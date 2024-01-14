@@ -1,4 +1,4 @@
-package tech.araopj.helpers;
+package me.araopj.helpers;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
