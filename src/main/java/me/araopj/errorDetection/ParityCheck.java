@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
  * @version 1.0
  * @since 1.0
  */
-public class ParityCheck implements Handler<ParityCheck> {
+public class ParityCheck implements Handler {
     private final String[] header = {
             "Letter",
             "ASCII Binary Equivalent",
@@ -37,6 +37,7 @@ public class ParityCheck implements Handler<ParityCheck> {
      * Handles the input for error detection.
      *
      * @param input The user input data to be checked for errors.
+     * @return true if the handler checks valid data
      */
     @Override
     public boolean handle(String input) {
