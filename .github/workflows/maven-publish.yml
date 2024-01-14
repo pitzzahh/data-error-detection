@@ -13,8 +13,8 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
-          java-version: '11.0.20'
-          distribution: 'graalvm-ce-11'
+          java-version: '11'
+          distribution: 'temurin'
           cache: maven
           server-id: central
           server-username: ${{ secrets.MAVEN_USERNAME }}
