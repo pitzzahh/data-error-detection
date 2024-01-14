@@ -9,6 +9,10 @@
     <version>0.0.1</version>
     <packaging>jar</packaging>
 
+    <name>${project.groupId}:${project.artifactId}</name>
+    <description>CLI for data error detection that focuses on ParityCheck, Two Dimensional Parity, and Arithmetic Checksum.</description>
+    <url>https://github.com/pitzzahh/data-error-detection</url>
+
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
