@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Handler<ParityCheck> parityCheckHandler = new ParityCheck();
+        Handler parityCheckHandler = new ParityCheck();
         boolean result = parityCheckHandler.handle(new Scanner(System.in).nextLine());
     }
 }
