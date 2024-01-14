@@ -6,6 +6,10 @@ import java.util.Objects;
 
 /**
  * The Helper class provides various utility methods for common operations.
+ *
+ * @author Peter John Arao
+ * @version 0.0.1
+ * @since 0.0.1
  */
 public class Helper {
 
