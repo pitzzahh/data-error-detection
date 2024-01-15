@@ -1,5 +1,6 @@
 package me.araopj.helpers;
 
+import me.araopj.dataErrorDetection.ParityCheck;
 import java.util.Arrays;
 import java.util.Locale;
 import java.util.Objects;
@@ -73,7 +74,7 @@ public class Helper {
      * @return The parity bit set of the parity
      */
     public static int parityBitSet(String parity) {
-        return Objects.equals(parity.toLowerCase(Locale.ROOT), "odd") ? 1 : 0;
+        return Objects.equals(parity.toLowerCase(Locale.ROOT), "odd") ? ParityCheck.oddValue : ParityCheck.evenValue;
     }
 
     /**
