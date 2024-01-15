@@ -73,7 +73,7 @@ public class Helper {
      * @param parity The parity.
      * @return The parity bit set of the parity
      */
-    public static int parityBitSet(String parity) {
+    public static byte parityBitSet(String parity) {
         return Objects.equals(parity.toLowerCase(Locale.ROOT), "odd") ? ParityCheck.oddValue : ParityCheck.evenValue;
     }
 
