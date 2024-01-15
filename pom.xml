@@ -6,7 +6,7 @@
 
     <groupId>me.araopj</groupId>
     <artifactId>data-error-detection</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <packaging>jar</packaging>
 
     <name>${project.groupId}:${project.artifactId}</name>
