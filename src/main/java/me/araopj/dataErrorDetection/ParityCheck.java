@@ -3,9 +3,7 @@ package me.araopj.dataErrorDetection;
 import me.araopj.cscreen.classes.Position;
 import me.araopj.cscreen.components.CTable;
 import me.araopj.helpers.Helper;
-
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -35,8 +33,8 @@ public class ParityCheck implements Handler {
             "Parity Bit Set",
             "ASCII Binary with Parity Bit"
     };
-    public static int oddValue = 1;
-    public static int evenValue = 0;
+    public static byte oddValue = 0;
+    public static byte evenValue = 1;
 
     /**
      * Handles the input for error detection.
@@ -46,21 +44,21 @@ public class ParityCheck implements Handler {
      */
     @Override
     public boolean handle(String input) {
-        final List<List<Model>> tableData = Arrays.stream(input.split(""))
+        final List<Model> tableData = Arrays.stream(input.split(""))
                 .map(e -> {
                     char character = e.charAt(0);
                     long asciiBinary = Helper.getAsciiBinary(character);
                     long bitCount = Helper.bitCount(asciiBinary);
                     String parity = Helper.isEven(bitCount) ? "Even" : "Odd";
-                    int parityBitSet = Helper.parityBitSet(parity);
-                    return List.of(new Model(
+                    byte parityBitSet = Helper.parityBitSet(parity);
+                    return new Model(
                             character,
                             asciiBinary,
                             bitCount,
                             parity,
                             parityBitSet,
                             Helper.asciiBinaryWithParityBit(asciiBinary, parityBitSet)
-                    ));
+                    );
                 })
                 .collect(Collectors.toUnmodifiableList());
 
@@ -72,9 +70,7 @@ public class ParityCheck implements Handler {
             table.setColumnAlignment(i, Position.CENTER);
         }
 
-        tableData.stream()
-                .flatMap(Collection::stream)
-                .forEach(e -> table.addRow(e.getData())); // impure
+        tableData.forEach(e -> table.addRow(e.getData())); // impure
 
         table.display();
 
@@ -86,10 +82,10 @@ public class ParityCheck implements Handler {
         public long asciiBinary;
         public long numberOfBits;
         public String parity;
-        public int parityBitSet;
+        public byte parityBitSet;
         public long abBitSet;
 
-        public Model(char letter, long asciiBinary, long numberOfBits, String parity, int parityBitSet, long abBitSet) {
+        protected Model(char letter, long asciiBinary, long numberOfBits, String parity, byte parityBitSet, long abBitSet) {
             this.letter = letter;
             this.asciiBinary = asciiBinary;
             this.numberOfBits = numberOfBits;
