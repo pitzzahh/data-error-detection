@@ -1,12 +1,12 @@
 package me.araopj.dataErrorDetection;
 
-import me.araopj.cscreen.classes.Position;
 import me.araopj.cscreen.components.CTable;
+import me.araopj.cscreen.classes.Position;
+import java.util.stream.IntStream;
 import me.araopj.helpers.Helper;
-import java.util.Arrays;
-import java.util.List;
+import java.util.stream.Stream;
 import java.util.Objects;
-import java.util.stream.Collectors;
+import java.util.Arrays;
 
 /**
  * Parity Check (Vertical Redundancy Check) - A simple method of error detection is by adding redundant bits
@@ -44,37 +44,20 @@ public class ParityCheck implements Handler {
      */
     @Override
     public boolean handle(String input) {
-        final List<Model> tableData = Arrays.stream(input.split(""))
-                .map(e -> {
-                    char character = e.charAt(0);
-                    long asciiBinary = Helper.getAsciiBinary(character);
-                    long bitCount = Helper.bitCount(asciiBinary);
-                    String parity = Helper.isEven(bitCount) ? "Even" : "Odd";
-                    byte parityBitSet = Helper.parityBitSet(parity);
-                    return new Model(
-                            character,
-                            asciiBinary,
-                            bitCount,
-                            parity,
-                            parityBitSet,
-                            Helper.asciiBinaryWithParityBit(asciiBinary, parityBitSet)
-                    );
+        Stream.of(new CTable(header))
+                .peek(table -> Arrays.stream(input.split(""))
+                        .map(Model::getModel)
+                        .map(Model::getData)
+                        .forEach(table::addRow))
+                .findFirst()
+                .map(cTable -> {
+                    cTable.useBoxSet();
+                    cTable.hasSeparator(true);
+                    IntStream.range(0, header.length).forEach(i -> cTable.setColumnAlignment(i, Position.CENTER)); // still impure
+                    return cTable;
                 })
-                .collect(Collectors.toUnmodifiableList());
-
-        CTable table = new CTable(header);
-        table.useBoxSet();
-        table.hasSeparator(true);
-
-        for (int i = 0; i < header.length; i++) {
-            table.setColumnAlignment(i, Position.CENTER);
-        }
-
-        tableData.forEach(e -> table.addRow(e.getData())); // impure
-
-        table.display();
-
-        return false;
+                .ifPresentOrElse(CTable::display, () -> System.err.println("No data to display."));
+        return true;
     }
 
     protected static class Model {
@@ -94,19 +77,6 @@ public class ParityCheck implements Handler {
             this.abBitSet = abBitSet;
         }
 
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Model model = (Model) o;
-            return asciiBinary == model.asciiBinary && numberOfBits == model.numberOfBits && parityBitSet == model.parityBitSet && abBitSet == model.abBitSet && Objects.equals(letter, model.letter) && Objects.equals(parity, model.parity);
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(letter, asciiBinary, numberOfBits, parity, parityBitSet, abBitSet);
-        }
-
         public String[] getData() {
             return new String[]{
                     String.valueOf(letter),
@@ -116,6 +86,35 @@ public class ParityCheck implements Handler {
                     String.valueOf(parityBitSet),
                     String.valueOf(abBitSet)
             };
+        }
+
+        public static Model getModel(String e) {
+            char character = e.charAt(0);
+            long asciiBinary = Helper.getAsciiBinary(character);
+            long bitCount = Helper.bitCount(asciiBinary);
+            String parity = Helper.isEven(bitCount) ? "Even" : "Odd";
+            byte parityBitSet = Helper.parityBitSet(parity);
+            return new Model(
+                    character,
+                    asciiBinary,
+                    bitCount,
+                    parity,
+                    parityBitSet,
+                    Helper.asciiBinaryWithParityBit(asciiBinary, parityBitSet)
+            );
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Model model = (Model) o;
+            return letter == model.letter && asciiBinary == model.asciiBinary && numberOfBits == model.numberOfBits && parityBitSet == model.parityBitSet && abBitSet == model.abBitSet && Objects.equals(parity, model.parity);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(letter, asciiBinary, numberOfBits, parity, parityBitSet, abBitSet);
         }
     }
 }
