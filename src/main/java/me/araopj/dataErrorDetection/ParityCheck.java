@@ -35,6 +35,8 @@ public class ParityCheck implements Handler {
             "Parity Bit Set",
             "ASCII Binary with Parity Bit"
     };
+    public static int oddValue = 1;
+    public static int evenValue = 0;
 
     /**
      * Handles the input for error detection.
@@ -44,24 +46,23 @@ public class ParityCheck implements Handler {
      */
     @Override
     public boolean handle(String input) {
-        List<List<Model>> rows = Arrays.stream(input.split(""))
+        final List<List<Model>> tableData = Arrays.stream(input.split(""))
                 .map(e -> {
                     char character = e.charAt(0);
                     long asciiBinary = Helper.getAsciiBinary(character);
                     long bitCount = Helper.bitCount(asciiBinary);
                     String parity = Helper.isEven(bitCount) ? "Even" : "Odd";
                     int parityBitSet = Helper.parityBitSet(parity);
-                    Model model = new Model(
+                    return List.of(new Model(
                             character,
                             asciiBinary,
                             bitCount,
                             parity,
                             parityBitSet,
                             Helper.asciiBinaryWithParityBit(asciiBinary, parityBitSet)
-                    );
-                    return List.of(model);
+                    ));
                 })
-                .collect(Collectors.toList());
+                .collect(Collectors.toUnmodifiableList());
 
         CTable table = new CTable(header);
         table.useBoxSet();
@@ -71,9 +72,9 @@ public class ParityCheck implements Handler {
             table.setColumnAlignment(i, Position.CENTER);
         }
 
-        rows.stream()
+        tableData.stream()
                 .flatMap(Collection::stream)
-                .forEach(e -> table.addRow(e.getData()));
+                .forEach(e -> table.addRow(e.getData())); // impure
 
         table.display();
 
