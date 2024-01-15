@@ -2,11 +2,9 @@ package me.araopj.dataErrorDetection;
 
 import me.araopj.cscreen.components.CTable;
 import me.araopj.cscreen.classes.Position;
-import java.util.stream.IntStream;
 import me.araopj.helpers.Helper;
 import java.util.stream.Stream;
 import java.util.Objects;
-import java.util.Arrays;
 
 /**
  * Parity Check (Vertical Redundancy Check) - A simple method of error detection is by adding redundant bits
@@ -44,19 +42,16 @@ public class ParityCheck implements Handler {
      */
     @Override
     public boolean handle(String input) {
-        Stream.of(new CTable(header))
-                .peek(table -> Arrays.stream(input.split(""))
-                        .map(Model::getModel)
-                        .map(Model::getData)
-                        .forEach(table::addRow))
-                .findFirst()
-                .map(cTable -> {
-                    cTable.useBoxSet();
-                    cTable.hasSeparator(true);
-                    IntStream.range(0, header.length).forEach(i -> cTable.setColumnAlignment(i, Position.CENTER)); // still impure
-                    return cTable;
-                })
-                .ifPresentOrElse(CTable::display, () -> System.err.println("No data to display."));
+        Objects.requireNonNull(input, "Input cannot be null");
+        CTable table = new CTable(header);
+        Stream.of(input.split(""))
+                .map(Model::getModel)
+                .map(Model::getData)
+                .forEach(table::addRow);
+        table.useBoxSet();
+        table.hasSeparator(true);
+        table.setColumnAlignment(Position.CENTER);
+        table.display();
         return true;
     }
 
